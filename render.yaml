@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: futari-maj
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/host-info
+    envVars:
+      - key: NODE_VERSION
+        value: 20
