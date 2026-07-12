@@ -2,6 +2,7 @@ services:
   - type: web
     name: futari-maj
     runtime: node
+    plan: free
     buildCommand: npm ci && npm run build
     startCommand: npm run start
     healthCheckPath: /api/host-info
